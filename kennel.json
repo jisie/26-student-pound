@@ -19,16 +19,6 @@
   ],
   "animals": [
     {
-      "id": 2,
-      "name": "Jack",
-      "breed": "Cocker Spaniel"
-    },
-    {
-      "id": 3,
-      "name": "Angus",
-      "breed": "Dalmatian"
-    },
-    {
       "id": 4,
       "name": "Henley",
       "breed": "Carolina Retriever"

@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ApiManager from "./ApiManager"
-import { withRouter } from 'react-router-dom';
+// import { withRouter } from 'react-router-dom';
 
 const checkOutAnimal = (props, animalId) => {
     ApiManager.deleteItem("animals", animalId)
     .then(() => {
         // this.history.push('/animals')
         console.log("props", props.history)
-        this.history.push('/animals')
+        props.history.push('/animals')
       })
 }
 
@@ -27,12 +27,12 @@ const Animal = props => {
         >
           Details
         </Link>
-        <a href = "#" onClick={() => {
-            (props.hasOwnProperty("checkOutAnimal")) ? props.checkOutAnimal(props.animal.id) : checkOutAnimal(props, props.animal.id)
+        <a href="#" onClick={() => {
+            checkOutAnimal(props, props.animal.id)
         }}>Delete</a>
       </div>
     </div>
   );
 };
 
-export default withRouter(Animal)
+export default Animal

@@ -33,7 +33,7 @@ export default class AnimalList extends Component {
             <Animal
               key={animal.id}
               animal={animal}
-              checkOutAnimal={this.checkOutAnimal}
+              {...this.props}
             />
           ))}
         </ul>
